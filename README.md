@@ -28,15 +28,20 @@
     git push --set-upstream origin master
     ```
 6.  **Install plugins**
+
     ```shell
     yarn add gatsby-plugin-manifest
     yarn add gatsby-plugin-offline
     ```
+
+    start url
+    icon
+
 7.  **Change `gatsby-config.js`**
     ```shell
     module.exports = {
       siteMetadata: {
-        title: \"Gatsby Default Starter\",
+        title: 'Gatsby Default Starter',
         description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
         author: `@gatsbyjs`,
       },
@@ -56,7 +61,7 @@
           options: {
             name: "GatsbyJS",
             short_name: "GatsbyJS",
-            start_url: "/",
+            start_url: "/basic-gatsby-pwa",
             background_color: "#6b37bf",
             theme_color: "#6b37bf",
             display: "minimal-ui",
@@ -67,3 +72,33 @@
       ],
     }
     ```
+
+yarn add gh-pages --dev
+
+package.json
+
+update scripts section - add deploy:
+
+     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+
+change repository and bugs url-s
+
+"scripts": {
+"deploy": "gatsby build --prefix-paths && gh-pages -d public",
+"build": "gatsby build",
+"develop": "gatsby develop",
+"format": "prettier --write \"\*_/_.{js,jsx,json,md}\"",
+"start": "npm run develop",
+"serve": "gatsby serve",
+"clean": "gatsby clean",
+"test": "echo \"Error: no test specified\" && exit 1"
+},
+"repository": {
+"type": "git",
+"url": "https://github.com/robertSefman/basic-gatsby-pwa"
+},
+"bugs": {
+"url": "https://github.com/robertSefman/basic-gatsby-pwa/issues"
+}
+
+yarn deploy
