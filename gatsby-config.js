@@ -4,7 +4,7 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
-  pathPrefix: "/basic-gatsby-pwa",
+  pathPrefix: "/pwa-indexed-db",
   plugins: [
     "gatsby-plugin-react-helmet",
     {
@@ -21,7 +21,7 @@ module.exports = {
       options: {
         name: "GatsbyJS",
         short_name: "GatsbyJS",
-        start_url: "/basic-gatsby-pwa",
+        start_url: "/pwa-indexed-db",
         background_color: "#6b37bf",
         theme_color: "#6b37bf",
         display: "minimal-ui",
